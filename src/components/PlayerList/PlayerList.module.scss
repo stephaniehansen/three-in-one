@@ -1,4 +1,11 @@
-img {
-  height: 16px;
-  margin-left: 3px;
+.playerList {
+  .playersContainer {
+    display: flex;
+
+    div {
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid black;
+    }
+  }
 }
