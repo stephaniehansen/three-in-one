@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from "./WeatherList.module.scss";
 
-const WeatherList = () => {
+import WeatherCard from "../WeatherCard";
+
+const WeatherList = ({ weather }) => {
   return (
     <>
-      <p>WeatherList works</p>
+      {weather[0].list.map(city => <WeatherCard city={city} key={city.id} />)}
     </>
   )
 }
