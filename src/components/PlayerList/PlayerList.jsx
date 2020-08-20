@@ -1,27 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import styles from "./PlayerList.module.scss";
+import team from "../../data/team";
 
 import PlayerCard from "../PlayerCard";
 
 const PlayerList = ({ players }) => {
-  const team = {
-    "Defender": [],
-    "Midfielder": [],
-    "Attacker": [],
-    "Goalkeeper": []
-  }
   const [selectedPlayers, setSelectedPlayers] = useState(team);
 
   const getPlayers = (position) => {
     return players.filter(player => player.position === position)
     .map(player => 
-      <PlayerCard key={player.id} player={player} handleChecked={handleChecked} />)
+      <PlayerCard key={player.id} player={player} handleChecked={handleChecked} isFull={checkFull(position)} />)
   }
 
-  const handleChecked = (player) => {
+  const checkFull = (position) => {
+    const limit = { "Defender": 3, "Midfielder": 4, "Attacker": 3, "Goalkeeper": 1 }
+    return Object.keys(selectedPlayers[position]).length >= limit[position] ? true : false
+  }
+
+  const handleChecked = (e, position) => {
+    const playerName = e.target.value;
     setSelectedPlayers({
       ...selectedPlayers,
-      [player.position]:  [...selectedPlayers[player.position], {name: player.name}]
+      [position]:  e.target.checked ? [...selectedPlayers[position], {name: playerName}] : selectedPlayers[position].filter(player => player.name !== playerName)
     });
   }
   
@@ -46,7 +47,6 @@ const PlayerList = ({ players }) => {
           {getPlayers("Goalkeeper")}
         </article>
       </div>
-      {console.log(selectedPlayers)}
     </section>
   )
 }
