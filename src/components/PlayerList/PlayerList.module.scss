@@ -1,11 +1,13 @@
 .playerList {
+  width: 80vw;
   .playersContainer {
     display: flex;
 
-    div {
+    article {
       padding: 10px;
       margin: 10px;
       border: 1px solid black;
+      width: 25%;
     }
   }
 }
