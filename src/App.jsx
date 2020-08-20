@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Routes from './containers/Routes';
 import styles from "./App.module.scss";
-
-import WeatherList from "./components/WeatherList";
 
 const App = () => {
   const [weather, setWeather] = useState();
@@ -20,11 +19,11 @@ const App = () => {
 
   useEffect(() => {
     fetchWeather();
-  }, [])
+  }, []);
 
   return (
     <>
-      {isLoading ? "Loading" : <WeatherList weather={weather}/>}
+      <div>{isLoading ? "Loading" : <Routes weather={weather} />}</div>
     </>
   );
 }
