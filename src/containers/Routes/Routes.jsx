@@ -8,7 +8,7 @@ import PlayerList from "../../components/PlayerList";
 
 const Routes = ({ weather }) => {
   return (
-    <Router>
+    <Router primary={false}>
       <Main path="/" />
       <WeatherList path="/weather" weather={weather} />
       <Quiz path="/quiz" />
