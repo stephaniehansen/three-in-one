@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Routes from './containers/Routes';
-import loading from "./assets/loading.gif";
 import { Container } from '@material-ui/core';
+import styles from "./App.module.scss";
+import loading from "./assets/loading.gif";
 
 import NavBar from "./components/NavBar";
 
