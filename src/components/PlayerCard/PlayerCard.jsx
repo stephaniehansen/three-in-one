@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from "./PlayerCard.module.scss";
 
+import placeholder from "../../assets/football-player.jpg";
+
 import { 
   Checkbox, 
   ListItem, 
@@ -21,9 +23,7 @@ const PlayerCard = ({ player, handleChecked, isFull }) => {
     <div className={styles.playerCard}>      
       <ListItem button>
         <ListItemAvatar>
-          <Avatar
-            src={`https://d2mt4yaynhqpf8.cloudfront.net/player/lars-stindl-borussia-moenchengladbach-dfl-sea-0001k3-500x500.png`}
-          />
+          <Avatar src={placeholder} alt="Football Player" />
         </ListItemAvatar>
         <ListItemText>{player.name}</ListItemText>
         <ListItemSecondaryAction>
@@ -31,6 +31,7 @@ const PlayerCard = ({ player, handleChecked, isFull }) => {
           value={player.name} 
           onClick={(e) => toggleCheckbox(e)} 
           disabled={!isChecked && isFull} 
+          color="primary"
         />
         </ListItemSecondaryAction>
       </ListItem>
