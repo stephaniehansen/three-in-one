@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Routes from './containers/Routes';
-import styles from "./App.module.scss";
+import loading from "./assets/loading.gif";
+import { Container } from '@material-ui/core';
+
+import NavBar from "./components/NavBar";
 
 const App = () => {
   const [weather, setWeather] = useState();
@@ -21,10 +24,17 @@ const App = () => {
     fetchWeather();
   }, []);
 
+  const getLoader = () => {
+    return <div className={styles.loader} ><img src={loading} /></div>
+  }
+
   return (
-    <>
-      <div>{isLoading ? "Loading" : <Routes weather={weather} />}</div>
-    </>
+    <div className={styles.app}>
+      <NavBar />
+      <Container maxWidth="lg">
+        {isLoading ? getLoader() : <Routes weather={weather} />}
+      </Container>
+    </div>
   );
 }
 
