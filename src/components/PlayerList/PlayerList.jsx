@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from "./PlayerList.module.scss";
-import team from "../../data/team";
+import players from "../../data/football-team";
+import team from "../../data/team-structure";
 
 import PlayerCard from "../PlayerCard";
 
-const PlayerList = ({ players }) => {
+const PlayerList = () => {
   const limit = { "Defender": 3, "Midfielder": 4, "Attacker": 3, "Goalkeeper": 1 }
   const [selectedPlayers, setSelectedPlayers] = useState(team);
 
