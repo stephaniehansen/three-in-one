@@ -1,8 +1,8 @@
-const team = {
+const teamStructure = {
   "Defender": [],
   "Midfielder": [],
   "Attacker": [], 
   "Goalkeeper": []
 }
 
-export default team;
+export default teamStructure;
