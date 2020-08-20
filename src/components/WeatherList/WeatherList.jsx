@@ -5,10 +5,12 @@ import WeatherCard from "../WeatherCard";
 
 const WeatherList = ({ weather }) => {
   return (
-    <>
+    <section className={styles.weatherList}>
       <h1>Weather</h1>
-      {weather.list.map(city => <WeatherCard city={city} key={city.id} />)}
-    </>
+      <div className={styles.weatherListContainer}>
+        {weather.list.map(city => <WeatherCard city={city} key={city.id} />)}
+      </div>
+    </section>
   )
 }
 
