@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Card } from '@material-ui/core';
 import styles from "./PlayerList.module.scss";
 import players from "../../data/football-team";
 import team from "../../data/team-structure";
@@ -36,26 +37,26 @@ const PlayerList = () => {
     <section className={styles.playerList}>
       <h1>Football Team Organiser</h1>
       <div className={styles.playersContainer}>
-        <article>
+        <Card className={styles.playerListCard} variant="outlined">
           <h2>Defenders</h2>
-          <span>{getRemaining("Defender")} </span>
+          <span className={styles.remainingTitle}>{getRemaining("Defender")} </span>
           {getPlayers("Defender")}
-        </article>
-        <article>
+        </Card>
+        <Card className={styles.playerListCard} variant="outlined">
           <h2>Midfielders</h2>
-          <span>{getRemaining("Midfielder")} </span>
+          <span className={styles.remainingTitle}>{getRemaining("Midfielder")} </span>
           {getPlayers("Midfielder")}
-        </article>
-        <article>
+        </Card>
+        <Card className={styles.playerListCard} variant="outlined">
           <h2>Attackers</h2>
-          <span>{getRemaining("Attacker")} </span>
+          <span className={styles.remainingTitle}>{getRemaining("Attacker")} </span>
           {getPlayers("Attacker")}
-        </article>
-        <article>
+        </Card>
+        <Card className={styles.playerListCard} variant="outlined">
           <h2>Goalkeepers</h2>
-          <span>{getRemaining("Goalkeeper")} </span>
+          <span className={styles.remainingTitle}>{getRemaining("Goalkeeper")} </span>
           {getPlayers("Goalkeeper")}
-        </article>
+        </Card>
       </div>
     </section>
   )
