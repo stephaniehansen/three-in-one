@@ -1,0 +1,14 @@
+.app {
+  margin-bottom: 36px;
+
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  
+    img {
+      height: 60px;
+    } 
+  }
+}
