@@ -12,7 +12,7 @@ const Routes = ({ weather }) => {
       <Main path="/" />
       <WeatherList path="/weather" weather={weather} />
       <Quiz path="/quiz" />
-      <PlayerList path="/football" />
+      <PlayerList path="/team-organiser" />
     </Router>
   );
 }
