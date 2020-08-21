@@ -1,6 +1,13 @@
 .weatherList {
   .weatherListContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    @media all and (min-width: 868px) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
   }
 }
