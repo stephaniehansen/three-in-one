@@ -1,5 +1,5 @@
 .weatherCard {
-  min-width: 320px;
+  width: 80%;
   padding: 20px 30px;
   margin: 10px;
 
@@ -9,5 +9,9 @@
 
   .cardContent {
     padding-top: 10px;
+  }
+
+  @media all and (min-width: 868px) {
+    width: 320px;
   }
 }
