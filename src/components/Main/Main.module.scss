@@ -2,18 +2,24 @@
 
   .mainContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     .mainCard {
-      width: 320px;
+      width: 80%;
       margin: 10px;  
       transition: all .2s linear;
 
       img {
-        height: 200px;
+        height: 300px;
         width: 100%;
         object-fit: cover;
         filter: grayscale(10%);
+        
+        @media all and (min-width: 868px) {
+          height: 210px;
+        }
       }
   
       .cardContent {
@@ -29,6 +35,13 @@
       &:hover {
         box-shadow: -1px 5px 12px 0px rgba(0, 0, 0, .25);
       }
+      @media all and (min-width: 868px) {
+        width: 320px;
+      }
+    }
+    @media all and (min-width: 868px) {
+      flex-direction: row;
+      align-items: flex-start;
     }
   }
 }
