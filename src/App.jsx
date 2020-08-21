@@ -26,7 +26,7 @@ const App = () => {
   }, []);
 
   const getLoader = () => {
-    return <div className={styles.loader} ><img src={loading} /></div>
+    return <div className={styles.loader}><img src={loading} /></div>
   }
 
   return (
