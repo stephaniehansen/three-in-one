@@ -29,7 +29,9 @@ const PlayerList = () => {
     const playerName = e.target.value;
     setSelectedPlayers({
       ...selectedPlayers,
-      [position]:  e.target.checked ? [...selectedPlayers[position], {name: playerName}] : selectedPlayers[position].filter(player => player.name !== playerName)
+      [position]:  e.target.checked ? 
+        [...selectedPlayers[position], {name: playerName}] : 
+        selectedPlayers[position].filter(player => player.name !== playerName)
     });
   }
   
