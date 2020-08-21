@@ -1,5 +1,4 @@
 .main {
-
   .mainContainer {
     display: flex;
     flex-direction: column;
@@ -39,6 +38,7 @@
         width: 320px;
       }
     }
+    
     @media all and (min-width: 868px) {
       flex-direction: row;
       align-items: flex-start;
