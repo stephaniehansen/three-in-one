@@ -27,7 +27,7 @@ const Main = () => {
             <img src={quiz} alt="One Question Quiz" />
             <div className={styles.cardContent}>
               <h2>One Question Quiz</h2>
-              <p>See if you can correctly answer the most difficult quiz in the world.</p>
+              <p>See if you can correctly answer the most difficult quiz in the universe.</p>
             </div>        
           </Link>
         </Card>
